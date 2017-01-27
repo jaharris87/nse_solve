@@ -1,0 +1,19 @@
+Data_SN160_Chimera                                                              
+Number of Nuclear Species=  160
+Reaction Count for the 8 different types
+         1         1       181
+         2       182       674
+         3       675       680
+         4         1       494
+         5       495      1330
+         6      1331      1340
+         7      1341      1344
+         8         1        16
+Necessary dimensions
+  nreac(1,2,3)=     680    1344      16
+    nan(1,2,3)=    1855    4857      53
+Reaction Count for non-REACLIB rates
+  nffn=     176   nnu=       0
+Matrix Sparseness parameters
+Border Widths      29   29
+Diagonal Widths    19   19(j<i,j>i)

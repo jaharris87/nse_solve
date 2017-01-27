@@ -1,0 +1,57 @@
+##
+## Makefile options for different build configurations
+##
+
+## Select compile mode
+CMODE ?= OPTIMIZE
+#CMODE ?= DEBUG
+#CMODE ?= DEBUGOPT
+#CMODE ?= PROFILE
+
+## Choose executable name
+EXE = xnse
+
+## SELECT MPI MODE, Default=OFF
+#MPI_MODE = ON
+
+## SELECT OPENMP MODE, Default=OFF
+#OPENMP_MODE = ON
+
+## SELECT GPU MODE, Default=OFF
+#GPU_MODE = ON
+
+## Defaults
+MPI_MODE    ?= OFF
+OPENMP_MODE ?= OFF
+GPU_MODE    ?= OFF
+
+## Choose EOS for screening; HELMHOLTZ (requires separate download)
+EOS ?= HELMHOLTZ
+
+## Choose matrix solver package 
+#MATRIX_SOLVER = PARDISO
+#MATRIX_SOLVER = MA28
+#MATRIX_SOLVER = MA48
+#MATRIX_SOLVER = gpu
+MATRIX_SOLVER ?= dense
+
+## Define alternative CPU LAPACK/BLAS package (Default is LIBSCI for Cray machines, NETLIB otherwise)
+#LAPACK_VER = MKL
+#LAPACK_VER = LIBSCIACC
+#LAPACK_VER = ACML
+#LAPACK_VER = LIBSCI
+#LAPACK_VER = ATLAS
+#LAPACK_VER = NETLIB
+LAPACK_VER = ACCEL
+
+## Define alternative GPU LAPACK/BLAS package (Default is LIBSCIACC for Cray machines, MAGMA otherwise)
+#GPU_LAPACK_VER = MAGMA
+#GPU_LAPACK_VER = CULA
+#GPU_LAPACK_VER = CUBLAS
+#GPU_LAPACK_VER = LIBSCIACC
+
+## GPU_TARGET specifies for which GPUs you want to compile
+##    Tesla  - NVIDIA compute capability 1.x cards
+##    Fermi  - NVIDIA compute capability 2.x cards
+##    Kepler - NVIDIA compute capability 3.x cards
+GPU_TARGET ?= Kepler
